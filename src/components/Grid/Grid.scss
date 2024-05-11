@@ -1,0 +1,16 @@
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+}
+
+.grid__cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid red;
+    &:hover {
+        cursor: pointer;
+    }
+}
