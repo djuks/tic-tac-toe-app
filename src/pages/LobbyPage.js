@@ -66,8 +66,8 @@ export const LobbyPage = () => {
             {game?.player_2 && <p>Player 2: {game?.player_2 === nickname ? game?.player_1: game?.player_2}</p>}
             {!game?.player_2 ? <p>Player 2: Waiting to join</p>: null}
             <Grid />
-
-            <p>Game active: {game?.end_game ? 'Other player leave the game!' : 'Playing!'}</p>
+      
+            {game?.message ? null : <p>Game status: {game?.end_game ? 'Other player leave the game!' : 'Playing!'}</p>}
             {game?.message ? <p>Winner: {game.message}</p> : null}
             <button onClick={handleExit} style={{ marginTop: 24 }}>Exit</button>
         </div>
